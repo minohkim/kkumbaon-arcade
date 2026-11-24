@@ -1,0 +1,15 @@
+{
+  "source": "Wikimedia Commons — Gustave Doré, illustrations for La Grande Bible de Tours (1866). 모두 퍼블릭 도메인(작가 사망 1883년).",
+  "art": [
+    {"key": "noah_deluge",    "file": "Gustave Doré - The Holy Bible - Plate I, The Deluge.jpg", "title": "대홍수", "ref": "창세기 7장", "use": "노아의 방주 배경"},
+    {"key": "noah_dove",      "file": "Dove Sent Forth from the Ark.png", "title": "방주에서 날려 보낸 비둘기", "ref": "창세기 8장", "use": "노아의 방주 결과 화면"},
+    {"key": "david_goliath",  "file": "David-goliath28.jpg", "title": "다윗과 골리앗", "ref": "사무엘상 17장", "use": "다윗의 물맷돌 (다음 단계)"},
+    {"key": "jonah_whale",    "file": "Dore jonah whale.jpg", "title": "요나와 큰 물고기", "ref": "요나 2장", "use": "추후 게임"},
+    {"key": "samson_lion",    "file": "Dore-SamsonSlayingTheLion.jpg", "title": "사자를 죽이는 삼손", "ref": "사사기 14장", "use": "추후 게임"},
+    {"key": "elijah_heaven",  "file": "Elijah taken up into heaven (89401747).jpg", "title": "하늘로 올라가는 엘리야", "ref": "열왕기하 2장", "use": "추후 게임"},
+    {"key": "abraham_canaan", "file": "Abraham Journeying into the Land of Canaan.png", "title": "가나안으로 가는 아브라함", "ref": "창세기 12장", "use": "추후 게임"},
+    {"key": "moses_rock",     "file": "Dore Moses Striking the Rock in Horeb.jpg", "title": "호렙 반석을 치는 모세", "ref": "출애굽기 17장", "use": "출애굽 러너 (추후)"},
+    {"key": "jericho",        "file": "The walls of Jericho falling down — Doré Bible illustration (Cassell, c.1870).jpg", "title": "무너지는 여리고 성벽", "ref": "여호수아 6장", "use": "추후 게임"},
+    {"key": "joshua_sun",     "file": "Dore joshua sun.jpg", "title": "해를 멈추게 한 여호수아", "ref": "여호수아 10장", "use": "추후 게임"}
+  ]
+}
