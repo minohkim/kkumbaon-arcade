@@ -151,7 +151,7 @@ function end(){
  const m=G.mode;G=null;
  app.innerHTML=`<span class="badge">${MODES[m].t}</span>
  <div class="card center"><div style="color:var(--mute)">최종 점수</div><div class="big-score">${lastScore}</div>
- <div>${nb?'🎉 <b>최고 기록 경신!</b>':`최고 기록 ${best}`}</div><div style="margin-top:8px;font-weight:700">${msg}</div>${MODES[m].endArt?`<img src="assets/art/${MODES[m].endArt}.jpg" alt="" onerror="this.remove()" style="width:100%;border-radius:12px;margin-top:12px;filter:sepia(.25)"><div class="credit">${MODES[m].credit}</div>`:''}${MODES[m].note?`<div class="info" style="text-align:left">${MODES[m].note}</div>`:''}</div>
+ <div>${nb?'🎉 <b>최고 기록 경신!</b>':`최고 기록 ${best}`}</div><div style="margin-top:8px;font-weight:700">${msg}</div>${MODES[m].endArt?`<img src="assets/art/${MODES[m].endArt}.jpg" alt="" onerror="this.remove()" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 12%;border-radius:12px;margin-top:12px;filter:sepia(.25)"><div class="credit">${MODES[m].credit}</div>`:''}${MODES[m].note?`<div class="info" style="text-align:left">${MODES[m].note}</div>`:''}</div>
  ${uniq.length?`<div class="card list"><b style="color:var(--ink)">📚 다시 보면 좋은 인물</b>${uniq.map(p=>`<div class="it"><b>${p.n}</b> · <small>${p.era} · ${p.ref}</small><br>${p.role}</div>`).join('')}</div>`:''}
  <div class="row"><button class="btn gold" style="flex:1" id="again">다시 하기</button><button class="btn ghost" style="flex:1" onclick="home()">처음으로</button></div>`;
  $('#again').onclick=()=>START[m]();
@@ -179,7 +179,7 @@ function vib(ms){try{navigator.vibrate&&navigator.vibrate(ms)}catch(e){}}
 function startNoah(){
  stop();G={mode:'noah',dead:true};
  app.innerHTML=`<div class="hud"><button class="btn ghost" style="padding:6px 12px;font-size:.85em" onclick="home()">✕</button><span class="badge">창세기 6~9장</span><span></span></div>
- <div class="hero" style="background-image:linear-gradient(180deg,rgba(20,24,36,.15),rgba(20,24,36,.85)),url(assets/art/noah_deluge.jpg)">
+ <div class="hero" style="background-image:linear-gradient(180deg,rgba(20,24,36,.15),rgba(20,24,36,.85)),url(assets/art/noah_dove.jpg)">
   <div class="hero-t">노아의 방주</div>
   <div class="hero-s">세상이 악해지자 하나님은 큰 홍수를 예고하셨어요. 노아는 말씀대로 방주를 짓고, 짐승들을 암수 한 쌍씩 태웠어요.</div>
  </div>
@@ -191,7 +191,7 @@ function startNoah(){
   <div class="rule"><span>⚡</span>번개는 피하세요${S.easy?' (쉬운 모드: 점수만 조금 깎여요)':' — 하트가 줄어요'}</div>
  </div>
  <button class="btn gold" style="width:100%" id="go">🚢 출항하기</button>
- <div class="credit">배경: 귀스타브 도레, 〈대홍수〉(1866) · 퍼블릭 도메인</div>`;
+ <div class="credit">그림: 귀스타브 도레, 〈방주에서 날려 보낸 비둘기〉(1866) 일부 · 퍼블릭 도메인</div>`;
  $('#go').onclick=()=>{beep('tick');playNoah()};
 }
 function playNoah(){
@@ -227,7 +227,7 @@ function playNoah(){
   // 그리기
   x.save();if(G.shake>0){G.shake-=dt;x.translate((Math.random()-.5)*10,0)}
   const g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'#1b2236');g.addColorStop(1,'#56688c');x.fillStyle=g;x.fillRect(-10,0,W+20,H);
-  const bg=art('noah_deluge');if(bg){const s=Math.max(W/bg.width,H/bg.height);x.globalAlpha=.28;x.filter='sepia(.6)';x.drawImage(bg,(W-bg.width*s)/2,(H-bg.height*s)/2,bg.width*s,bg.height*s);x.filter='none';x.globalAlpha=1}
+  const bg=art('noah_deluge');if(bg){const s=Math.max(W/bg.width,H/bg.height);x.globalAlpha=.16;x.filter='sepia(.6) blur(1.5px)';x.drawImage(bg,(W-bg.width*s)/2,(H-bg.height*s)/2,bg.width*s,bg.height*s);x.filter='none';x.globalAlpha=1}
   if(G.flash>0){G.flash-=dt;x.fillStyle='rgba(255,255,230,'+(G.flash*2)+')';x.fillRect(0,0,W,H)}
   x.strokeStyle='rgba(200,220,255,.4)';x.lineWidth=1.4;const rs=1+el/30;rain.forEach(r=>{r.y+=380*rs*r.s*dt;r.x-=70*dt;if(r.y>H){r.y=-10;r.x=Math.random()*W*1.2}x.beginPath();x.moveTo(r.x,r.y);x.lineTo(r.x-4,r.y+12*r.s);x.stroke()});
   G.items.forEach(it=>{if(it.gold){x.shadowColor='#f6d78b';x.shadowBlur=22}x.font=(it.bolt?36:it.gold?34:32)+'px serif';x.fillText(it.e,it.x,it.y);x.shadowBlur=0});

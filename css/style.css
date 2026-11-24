@@ -64,7 +64,7 @@ h1{font-family:'Gowun Batang',serif;font-size:1.9em;margin:.2em 0 .1em;color:var
 .confetti{position:fixed;top:-20px;width:10px;height:14px;z-index:9;pointer-events:none;animation:fall linear forwards}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
 
-.hero{border-radius:18px;min-height:230px;background:#26324f center/cover;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;color:#fff;margin:10px 0;box-shadow:0 3px 0 var(--line)}
+.hero{border-radius:18px;min-height:230px;background:#26324f 50% 8%/cover;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;color:#fff;margin:10px 0;box-shadow:0 3px 0 var(--line)}
 .hero-t{font-family:'Gowun Batang',serif;font-size:2em}
 .hero-s{font-size:.92em;line-height:1.6;opacity:.92;margin-top:6px}
 .rule{display:flex;gap:10px;align-items:center;padding:6px 0}
