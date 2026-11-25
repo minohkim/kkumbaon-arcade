@@ -1,6 +1,8 @@
 # 꿈바온 성경 아케이드
 
 꿈바온 디지털 도서관(kkumbaon.com) 자료로 만드는 성경 게임 모음입니다.
+**▶ 바로 하기: https://minohkim.github.io/kkumbaon-arcade/**
+
 웹 하나로 만들어 **① 꿈바온 홈페이지에 붙이고 ② Capacitor로 감싸 iOS/Android 앱**으로 출시하는 것이 목표입니다.
 
 ## 지금 들어 있는 게임
